@@ -6,7 +6,8 @@
   "author": "Anthony Paulin <apaulin@cisco.com>",
   "license": "ISC",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "test": "mocha test/test.js"
   },
   "dependencies": {
     "body-parser": "1.17.2",

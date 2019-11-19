@@ -14,7 +14,7 @@ class MainController {
 		console.debug("Test");
 	}
 	
-	create(req,res,next){
+	create(req,res,next) {
 		var Test = mongoose.model('Test');
 		var test = new Test(req.body);
 		test.save((err) => {
@@ -27,7 +27,7 @@ class MainController {
 		});
 	}
 	
-	getAll(req,res,next){
+	getAll(req,res,next) {
 		var Test = mongoose.model('Test');
 		Test.find(function (err, tests) {
 			if (err) {
