@@ -1,0 +1,91 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "NodeJS server template",
+    "description": "Application API",
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "host": "localhost:5000",
+  "basePath": "/api/v1",
+  "tags": [
+    {
+      "name": "Test",
+      "description": "API for tests in the system"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/test": {
+      "post": {
+        "tags": [
+          "Test"
+        ],
+        "description": "Create a new test",
+        "parameters": [
+          {
+            "name": "test",
+            "in": "body",
+            "description": "Test that we want to create",
+            "schema": {
+              "$ref": "#/definitions/Test"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "New test is created",
+            "schema": {
+              "$ref": "#/definitions/Test"
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Tests"
+        ],
+        "summary": "Get all test in system",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Tests"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Test": {
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "uniqueItems": true
+          }
+        }
+      },
+    "Tests": {
+        "type": "array",
+        "$ref": "#/definitions/Test"
+      }
+  }
+}

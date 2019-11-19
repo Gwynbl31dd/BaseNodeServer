@@ -1,0 +1,27 @@
+{
+  "name": "BaseServer",
+  "version": "0.0.1",
+  "private": false,
+  "description": "Base nodejs server template",
+  "author": "Anthony Paulin <apaulin@cisco.com>",
+  "license": "ISC",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "1.17.2",
+    "ejs": "^2.6.1",
+    "errorhandler": "^1.5.1",
+    "express": "4.15.3",
+    "http": "0.0.0",
+    "method-override": "2.3.9",
+    "mongoose": "^5.7.11",
+    "swagger-ui-express": "2.0.6"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4",
+    "nock": "^10.0.6",
+    "sinon": "^7.3.2"
+  }
+}
